@@ -24,4 +24,31 @@
     height: 75px;
     padding-top: 10px;
 }
+.myfooter{
+        background-color: #7a7e7f;
+    color: black;
+    padding-top: 10px;
+    font-family: myFont;
+    text-align:justify;
+}
+.subfooter{
+    background-color:#000204;
+    color:white;
+    padding:10px;
+    text-align:center;
+    font-family:myFont;
+}.myfooter a{
+     color:azure;
+ }
+ .mfooter h3,a,p{
+     margin-bottom:20px;
+    font-family:myFont2;
+    list-style-type:none;
+ }
+ .myfooter p{
+     color:azure;
+ }
+
+
+
 

@@ -2,6 +2,7 @@
 
 <html>
 <head>
+    <meta name="viewport" content="width=device-width,intial scale=1" />
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Content/Style.css" rel="stylesheet" />
@@ -31,19 +32,19 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="glyphicon glyphicon-home"></i>
+                            <i class="glyphicon glyphicon-th-large"></i>
                             اصناف الموقع
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="glyphicon glyphicon-home"></i>
+                            <i class="glyphicon glyphicon-info-sign"></i>
                             حول الموقع
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="glyphicon glyphicon-home"></i>
+                            <i class="glyphicon glyphicon-envelope"></i>
                             اتصل بنا 
                         </a>
                     </li>
@@ -77,6 +78,59 @@
         @RenderBody()
 
     <!--Footer-->
+    <footer class="navbar navbar-fixed-bottom myfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-info-sign"></i>
+                        من نحن 
+                    </h3>
+                    <p>
+                        لا بد أن تكون الصفحة مُقنعة، بحيثُ تُظهِر لزوار الموقع مدى احترافية شركتك،  ما يمنحك فرصة أكبر لتعزيز ثقة العملاء الحاليين، وتحويل الزوار إلى عملاء، وترك انطباع جيّد لدى المستثمرين، 
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-hand-down"></i>
+                        روابط هامة
+                    </h3>
+                   <ul>
+                       <li><a href="#">وظائف للقطاع العام</a></li>
+                       <li><a href="#">وظائف للقطاع الخاص</a></li>
+                       <li><a href="#">وظائف خارج البلاد</a></li>
+                       <li><a href="#">وظائف متنوعة</a></li>
+                   </ul>
+
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        تواصل معنا 
+                    </h3>
+                    <ul>
+                        <li><a href="#">صفحتنا على الفيسبوك</a></li>
+                        <li><a href="#">تابعنا على تويتر</a></li>
+                        <li><a href="#">شاهدنا على اليوتيوب</a></li>
+                        <li><a href="#">اترك لنا رسالة</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        
+        
+        
+        
+        </div>
+        <div class="subfooter">
+            <span>
+                جميع الحقوق محفوظة لموقع التوظيف 2020
+            </span>
+        </div>
+    </footer>
+
+
     <script src="~/scripts/jquery.js"></script>
     <script src="~/scripts/bootstrap.min.js"></script>
 </body>

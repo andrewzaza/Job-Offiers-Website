@@ -7,7 +7,7 @@
     src:url('font/DroidKufi-Regular.ttf')
 }
 .navbar-default {
-    background-color: #000204;
+    background-color: #0c5c82;
     border-color: #f1f1f1;
    
 }
@@ -25,14 +25,14 @@
     padding-top: 10px;
 }
 .myfooter{
-        background-color: #7a7e7f;
+        background-color: cornflowerblue;
     color: black;
     padding-top: 10px;
     font-family: myFont;
     text-align:justify;
 }
 .subfooter{
-    background-color:#000204;
+    background-color:#0c5c82;
     color:white;
     padding:10px;
     text-align:center;
@@ -48,7 +48,12 @@
  .myfooter p{
      color:azure;
  }
+ .logo-size{
+     width:120px;
+     height:62px;
+     margin-top:-7px;
 
+ }
 
 
 

@@ -48,3 +48,29 @@ F:\cmder\Job Offers Website\Job Offers Website\bin\System.Web.Mvc.xml
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.csprojResolveAssemblyReference.cache
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.dll
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.pdb
+F:\cmder\Job Offers Website\Job Offers Website\bin\Antlr3.Runtime.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.Core.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.Cookies.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.Google.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.OAuth.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Newtonsoft.Json.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Owin.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\System.Web.Optimization.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\WebGrease.dll
+F:\cmder\Job Offers Website\Job Offers Website\bin\Antlr3.Runtime.pdb
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.Core.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.Cookies.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.Google.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.OAuth.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\Newtonsoft.Json.xml
+F:\cmder\Job Offers Website\Job Offers Website\bin\System.Web.Optimization.xml

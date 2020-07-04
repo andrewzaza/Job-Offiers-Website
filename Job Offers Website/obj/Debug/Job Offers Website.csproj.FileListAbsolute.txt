@@ -78,3 +78,4 @@ F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migr
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.csproj.GenerateResource.Cache
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddColumn.resources
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddCategoryTable.resources
+F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddJObTable.resources

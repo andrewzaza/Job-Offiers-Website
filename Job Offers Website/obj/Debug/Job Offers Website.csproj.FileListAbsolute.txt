@@ -74,3 +74,6 @@ F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.Googl
 F:\cmder\Job Offers Website\Job Offers Website\bin\Microsoft.Owin.Security.OAuth.xml
 F:\cmder\Job Offers Website\Job Offers Website\bin\Newtonsoft.Json.xml
 F:\cmder\Job Offers Website\Job Offers Website\bin\System.Web.Optimization.xml
+F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.InitialCreate.resources
+F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.csproj.GenerateResource.Cache
+F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddColumn.resources

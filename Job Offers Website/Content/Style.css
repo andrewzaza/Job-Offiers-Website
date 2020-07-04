@@ -15,6 +15,9 @@
     color: #fff;
     font-family:myFont;
 }
+body{
+    padding-top:100px;
+}
 .navbar-default .navbar-nav>li>a:hover {
     color: #808080;
 }

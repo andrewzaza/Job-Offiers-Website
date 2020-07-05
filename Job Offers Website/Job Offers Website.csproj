@@ -291,6 +291,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\font\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202007031616330_InitialCreate.resx">

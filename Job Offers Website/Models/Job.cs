@@ -20,7 +20,7 @@ namespace Job_Offers_Website.Models
         [DisplayName("نوع الوظيفة")]
         public int CategoryId { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
     }
 }

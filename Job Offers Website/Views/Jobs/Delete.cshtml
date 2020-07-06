@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>الحذف</h2>
+<h2>حذف الوظيفة</h2>
 
 <h3>هل انت متاكد من حذف هذا النوع ؟</h3>
 <div>
@@ -41,7 +41,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.JobImage)
+            <img src="~/Uploads//@Html.DisplayFor(model=>model.JobImage)"
+                 class="thumbnail" style="width:48px;height:48px;" />
         </dd>
 
     </dl>

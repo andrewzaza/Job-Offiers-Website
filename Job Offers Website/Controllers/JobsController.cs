@@ -91,9 +91,16 @@ namespace Job_Offers_Website.Controllers
         {
             if (ModelState.IsValid)
             {
-                String path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
-                upload.SaveAs(path);
-                job.JobImage = upload.FileName;
+                string oldPath = Path.Combine(Server.MapPath("~/Uploads"), job.JobImage);
+
+                if (upload != null)
+                {
+                    System.IO.File.Delete(oldPath);
+                    String path = Path.Combine(Server.MapPath("~/Uploads"), upload.FileName);
+                    upload.SaveAs(path);
+                    job.JobImage = upload.FileName;
+                }
+                
                 db.Entry(job).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

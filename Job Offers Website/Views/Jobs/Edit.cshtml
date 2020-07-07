@@ -28,6 +28,7 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.JobImage)
 
         <div class="form-group">
             @Html.LabelFor(model => model.JObTitle, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -48,7 +49,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.JobImage, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <input type="file" name="upload" id="JobImage" />
+                <input type="file" name="upload" id="myImage" />
                 @Html.ValidationMessageFor(model => model.JobImage, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -76,22 +77,39 @@
 </div>
 
 @section scripts{
-<script>
-
+    <script>
     $(function () {
         $("#save").click(function () {
-            if ($("#JobImage").val() == "") {
+            //Check if the input is Empty
+            //if ($("#JobImage").val() == "") {
+            //    $("#error-div").fadeIn();
+            //    $("#view-err").append("please choose image for job");
+            //    return false;
+            //}
+            if ($("#myImage").val() != "") {
+
+
+            //Check if the Image extension is valid
+                var filename = document.getElementById("myImage").value;
+
+            var extensionImg = filename.substr(filename.lastIndexOf('.') + 1);
+            var validExtension = ['jpg', 'png', 'gif', 'bmp'];
+            if($.inArray(extensionImg, validExtension) == -1){
                 $("#error-div").fadeIn();
-                $("#view-err").append("رجاء قم باختيار صورة للوظيفة");
+                $("#view-err").append("رجاء اختيار امتداد صحيح للصورة ");
                 return false;
             }
-        })
-    })
 
+            //Check if the Image Size is valid (2 mb)
+            var myFileSize = document.getElementById("myImage").files[0].size / 1024 / 1024;
 
-
-</script>    
-    }
-
-
-
+            if(myFileSize > 2){
+                $("#error-div").fadeIn();
+                $("#view-err").append("رجاء اختيار صورة حجمها اقل من 2 ميجا بايت");
+                return false;
+            }
+            }
+        });
+    });
+    </script>
+}

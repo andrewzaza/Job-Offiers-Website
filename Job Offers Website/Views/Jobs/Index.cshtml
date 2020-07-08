@@ -10,7 +10,7 @@
 <p>
     @Html.ActionLink("انشاء وظيفة جديدة", "Create")
 </p>
-<table class="table table-stripped table-bordered table-hover">
+<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Category.CategoryName)
@@ -49,7 +49,5 @@
         </td>
     </tr>
 }
+
 </table>
-<div>
-    @Html.ActionLink("العودة الى القائمة", "Index")
-</div>

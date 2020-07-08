@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,9 +18,15 @@ namespace Job_Offers_Website.Controllers
         }
 
         // GET: Roles/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
-            return View();
+            var role = db.Roles.Find(id);
+            if (role == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(role);
         }
 
         // GET: Roles/Create
@@ -30,19 +37,21 @@ namespace Job_Offers_Website.Controllers
 
         // POST: Roles/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(IdentityRole role)
         {
-            try
-            {
-                // TODO: Add insert logic here
+           
 
-                return RedirectToAction("Index");
+                if(ModelState.IsValid)
+                {
+                    db.Roles.Add(role);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+
+                }
+                return View(role);
             }
-            catch
-            {
-                return View();
-            }
-        }
+           
+        
 
         // GET: Roles/Edit/5
         public ActionResult Edit(int id)

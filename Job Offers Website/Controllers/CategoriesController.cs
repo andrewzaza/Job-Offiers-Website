@@ -11,6 +11,7 @@ using WebApplication1.Models;
 
 namespace Job_Offers_Website.Controllers
 {
+    [Authorize(Roles ="Admins")]
     public class CategoriesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

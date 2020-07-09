@@ -12,6 +12,7 @@ using System.IO;
 
 namespace Job_Offers_Website.Controllers
 {
+    [Authorize]
     public class JobsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

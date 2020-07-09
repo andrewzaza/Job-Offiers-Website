@@ -61,12 +61,19 @@ namespace WebApplication1.Controllers
             else
             {
                 ViewBag.Result = "المعذرة لقد سبق التقدم لهذة الوظيفة ";
-            }       
-
-           
-
+            }      
 
             return View();
+        }
+
+
+        public ActionResult GetJobsByUser()
+        {
+            var UserId = User.Identity.GetUserId();
+            var Jobs = db.ApplyForJobs.Where(a => a.UserId == UserId);
+            return View(Jobs.ToList());
+
+
         }
 
         public ActionResult About()

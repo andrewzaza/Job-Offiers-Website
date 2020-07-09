@@ -79,3 +79,4 @@ F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job Offers Website.cspr
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddColumn.resources
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddCategoryTable.resources
 F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.AddJObTable.resources
+F:\cmder\Job Offers Website\Job Offers Website\obj\Debug\Job_Offers_Website.Migrations.ApplyJobs.resources

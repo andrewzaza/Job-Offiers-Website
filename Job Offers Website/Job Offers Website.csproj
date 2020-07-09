@@ -228,6 +228,10 @@
     <Compile Include="Migrations\202007041536042_AddJObTable.Designer.cs">
       <DependentUpon>202007041536042_AddJObTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007091538254_ApplyJobs.cs" />
+    <Compile Include="Migrations\202007091538254_ApplyJobs.Designer.cs">
+      <DependentUpon>202007091538254_ApplyJobs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplyForJob.cs" />
@@ -315,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007041536042_AddJObTable.resx">
       <DependentUpon>202007041536042_AddJObTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007091538254_ApplyJobs.resx">
+      <DependentUpon>202007091538254_ApplyJobs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

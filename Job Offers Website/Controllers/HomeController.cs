@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using Job_Offers_Website.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,16 +30,41 @@ namespace WebApplication1.Controllers
             Session["JobId"] = JobId; 
             return View(job);
         }
-
+        [Authorize]
          public ActionResult Apply()
         {
             return View();
+
         }
+
         [HttpPost]
         public ActionResult Apply(string Message)
         {
             var UserId = User.Identity.GetUserId();
             var JobId = (int)Session["JobId"];
+
+            var check = db.ApplyForJobs.Where(a => a.JobId == JobId && a.UserId == UserId).ToList();
+
+            if (check.Count < 1)
+            {
+                var job = new ApplyForJob();
+
+                job.UserId = UserId;
+                job.JobId = JobId;
+                job.Message = Message;
+                job.ApplyDate = DateTime.Now;
+
+                db.ApplyForJobs.Add(job);
+                db.SaveChanges();
+                ViewBag.Result = "تمت الاضافة بنجاح";
+            }
+            else
+            {
+                ViewBag.Result = "المعذرة لقد سبق التقدم لهذة الوظيفة ";
+            }       
+
+           
+
 
             return View();
         }

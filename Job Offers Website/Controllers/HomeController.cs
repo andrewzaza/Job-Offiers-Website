@@ -66,14 +66,23 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-
+        [Authorize]
         public ActionResult GetJobsByUser()
         {
             var UserId = User.Identity.GetUserId();
             var Jobs = db.ApplyForJobs.Where(a => a.UserId == UserId);
             return View(Jobs.ToList());
+        }
+        public ActionResult DetailsOfJob(int id)
+        {
+            var job = db.ApplyForJobs.Find(id);
 
+            if (job == null)
+            {
+                return HttpNotFound();
 
+            }
+            return View(job);
         }
 
         public ActionResult About()

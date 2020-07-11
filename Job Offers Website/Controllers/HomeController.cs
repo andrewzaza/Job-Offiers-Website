@@ -86,6 +86,18 @@ namespace WebApplication1.Controllers
             }
             return View(job);
         }
+        [Authorize]
+        public ActionResult GetJobsByPublisher()
+        {
+            var UserID = User.Identity.GetUserId();
+            var Jobs = from app in db.ApplyForJobs
+                       join job in db.Jobs
+                       on app.JobId equals job.Id
+                       where job.User.Id == UserID
+                       select app;
+            return View(Jobs.ToList());
+        }
+       
         public ActionResult Edit(int id)
         {
             var job = db.ApplyForJobs.Find(id);
@@ -97,6 +109,8 @@ namespace WebApplication1.Controllers
             }
             return View(job);
         }
+
+
         [HttpPost]
         public ActionResult Edit(ApplyForJob job)
         {

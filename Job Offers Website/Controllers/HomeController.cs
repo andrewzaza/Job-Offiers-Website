@@ -95,7 +95,18 @@ namespace WebApplication1.Controllers
                        on app.JobId equals job.Id
                        where job.User.Id == UserID
                        select app;
-            return View(Jobs.ToList());
+
+            var grouped = from j in Jobs
+                          group j by j.job.JObTitle
+                          into gr
+                          select new JobsViewModel
+                          {
+                              JobTitle = gr.Key,
+                              Items = gr
+                          };
+
+
+            return View(grouped.ToList());
         }
        
         public ActionResult Edit(int id)

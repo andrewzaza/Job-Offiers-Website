@@ -92,6 +92,35 @@ namespace WebApplication1.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
+    public class EditProfileViewModel
+    {
+        public int Id { get; set; }
+        [Required]
+        [DisplayName("أسم المستخدم")]
+        public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "البريد الالكترونى")]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "كلمة السر الحالية ")]
+        public string CurrentPassword { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "كلمة السر الجديدة ")]
+        public string NewPassword { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = " تاكيد كلمة السر الجديدة")]
+        [Compare("NewPassword", ErrorMessage = "كلمات السر المدخلة غير متوافقة رجاء قم بالتصحبح")]
+        public string ConfirmPassword { get; set; }
+    }
 
     public class ResetPasswordViewModel
     {

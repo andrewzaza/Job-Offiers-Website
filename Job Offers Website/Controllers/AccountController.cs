@@ -191,7 +191,27 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult EditProfile(EditProfileViewModel profile)
         {
-            return View();
+            var UserID = User.Identity.GetUserId();
+            var CurrentUser = db.Users.Where(a => a.Id == UserID).SingleOrDefault();
+            if (!UserManager.CheckPassword(CurrentUser, profile.CurrentPassword))
+            {
+                ViewBag.Message = "كلمة السر الحالية غير صحيحة";
+
+            }
+            else
+            {
+                var newPasswordHash = UserManager.PasswordHasher.HashPassword(profile.NewPassword);
+                CurrentUser.UserName = profile.UserName;
+                CurrentUser.Email = profile.Email;
+                CurrentUser.PasswordHash = newPasswordHash;
+                db.Entry(CurrentUser).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                ViewBag.Message = "تمت عملية التحديث بنجاح";
+
+
+            }
+
+            return View(profile);
         }
 
         //

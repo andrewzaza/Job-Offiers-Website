@@ -74,6 +74,11 @@ body{
 .img-size{
     font-size:90px;
 }
+.navbar-user{
+    padding:10px;
+    padding-bottom:0px;
+    width:350px;
+}
 
 
 

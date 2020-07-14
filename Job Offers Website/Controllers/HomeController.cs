@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
@@ -166,10 +168,26 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-
+        [HttpGet]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Contact(ContactModel contact)
+        {
+            var mail = new MailMessage();
+            var loginfo = new NetworkCredential("Andrewzaza915@gmail.com","As224466$$");
+            mail.From = new MailAddress(contact.Email);
+            mail.To.Add(new MailAddress("Andrewzaza915@gmail.com"));
+            mail.Subject = contact.Subject;
+            mail.Body = contact.Message;
+
+
+            var smtpClient = new SmtpClient("smtp.gmail.com", 587);
+            smtpClient.EnableSsl = true;
+            smtpClient.Credentials = loginfo;
+            smtpClient.Send(mail);
 
             return View();
         }

@@ -318,6 +318,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\font\" />
+    <Folder Include="scripts\ckeditor\" />
     <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>

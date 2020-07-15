@@ -169,28 +169,31 @@ namespace WebApplication1.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Contact()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Contact(ContactModel contact)
-        {
+         public ActionResult Contact()
+          {
+              return View();
+          }
+          [HttpPost]
+          public ActionResult Contact(ContactModel contact)
+          {
             var mail = new MailMessage();
-            var loginfo = new NetworkCredential("Andrewzaza915@gmail.com","As224466$$");
+            var loginfo = new NetworkCredential("andrewzaza915@gmail.com", "As224466$$");
             mail.From = new MailAddress(contact.Email);
-            mail.To.Add(new MailAddress("Andrewzaza915@gmail.com"));
+            mail.To.Add(new MailAddress("andrewzaza915@gmail.com"));
             mail.Subject = contact.Subject;
-            mail.Body = contact.Message;
-
+            mail.IsBodyHtml = true;
+            string body = "اسم المرسل :" + contact.Name + "<br>" +
+                          "بريد المرسل  :" + contact.Email + "<br>" +
+                          " عنوان الرسالة :" + contact.Subject + "<br>" +
+                          "نص الرسالة :" + contact.Message + "<br>";
+            mail.Body = body;
 
             var smtpClient = new SmtpClient("smtp.gmail.com", 587);
             smtpClient.EnableSsl = true;
             smtpClient.Credentials = loginfo;
             smtpClient.Send(mail);
-
-            return View();
-        }
+            return RedirectToAction("Index");
+          }
         public ActionResult Search()
         {
             return View();

@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#"class="navbar-brand">
+                <a href="~/Home"class="navbar-brand">
                     
                     <img src="~/images/Capture.PNG"  class="logo-size"/>
                 </a>
@@ -26,20 +26,20 @@
             <div id="navbar"class="navbar-collapse collapsed">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">
+                        <a href="~/Home">
                             <i class="glyphicon glyphicon-home"></i>
                         الرئيسية
                         </a>
                     </li>
                    
                     <li>
-                        <a href="#">
+                        <a href="~/Home/About">
                             <i class="glyphicon glyphicon-info-sign"></i>
                             حول الموقع
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="~/Home/Contact">
                             <i class="glyphicon glyphicon-envelope"></i>
                             اتصل بنا 
                         </a>
@@ -69,7 +69,7 @@
     </nav>
     
     <div class="container">
-        <div class="row">
+        <div class="row" style="min-height:550px;">
 
             @RenderBody()
 

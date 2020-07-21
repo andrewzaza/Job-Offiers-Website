@@ -79,6 +79,9 @@ body{
     padding-bottom:0px;
     width:350px;
 }
+.col-md-3{
+    width:23%;
+}   
 
 
 

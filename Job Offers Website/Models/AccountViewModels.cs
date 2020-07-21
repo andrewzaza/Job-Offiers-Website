@@ -50,16 +50,16 @@ namespace WebApplication1.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "UserName")]
+        [Display(Name = "اسم المستخدم")]
         
         public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "كلمة السر")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "حفظ")]
         public bool RememberMe { get; set; }
     }
 

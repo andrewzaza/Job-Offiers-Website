@@ -9,6 +9,7 @@ namespace Job_Offers_Website.Models
     public class ApplyForJob
     {
         public int Id { get; set; }
+        
         public string Message { get; set; }
         public DateTime ApplyDate { get; set; }
         public int JobId { get; set; }
